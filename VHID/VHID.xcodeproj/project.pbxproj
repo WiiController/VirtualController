@@ -11,96 +11,60 @@
 		0A18413315BE8C9000F223E4 /* VHIDDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A18412D15BE8C9000F223E4 /* VHIDDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0A18413415BE8C9000F223E4 /* VHIDDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A18412E15BE8C9000F223E4 /* VHIDDevice.m */; };
 		0A18413615BE8C9000F223E4 /* VHIDPointerCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A18413015BE8C9000F223E4 /* VHIDPointerCollection.m */; };
-		0A18416B15BE8D9800F223E4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
-		0A18416E15BE8D9A00F223E4 /* WirtualJoy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A18414F15BE8D3300F223E4 /* WirtualJoy.framework */; };
-		0A18417015BE8DAF00F223E4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A18416F15BE8DAF00F223E4 /* MainMenu.xib */; };
-		0A18417415BE8DC500F223E4 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A18417315BE8DC500F223E4 /* MainController.m */; };
-		0A18418615BE8E1700F223E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A18418515BE8E1700F223E4 /* main.m */; };
-		0A1841AA15BE904400F223E4 /* VHID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* VHID.framework */; };
-		0A1841C115BE906200F223E4 /* VHID.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* VHID.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		0A1841C615BE906800F223E4 /* WirtualJoy.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 0A18414F15BE8D3300F223E4 /* WirtualJoy.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		0A18444015BE990D00F223E4 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A18443F15BE990D00F223E4 /* TestView.m */; };
-		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
+		3C2DCFB02C801CC80099B4A8 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A18443F15BE990D00F223E4 /* TestView.m */; };
+		3C2DCFB12C801CCB0099B4A8 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A18417315BE8DC500F223E4 /* MainController.m */; };
+		3C2DCFB22C801CCD0099B4A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A18418515BE8E1700F223E4 /* main.m */; };
+		3C2DCFB62C801CE60099B4A8 /* MainMenu.xib in Sources */ = {isa = PBXBuildFile; fileRef = 0A18416F15BE8DAF00F223E4 /* MainMenu.xib */; };
+		3C2DCFB82C801D8C0099B4A8 /* VHID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* VHID.framework */; };
+		3C2DCFB92C801D9A0099B4A8 /* VirtualController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DCF8B2C800C0D0099B4A8 /* VirtualController.framework */; };
+		3C2DCFC02C801F5C0099B4A8 /* ca.igregory.WiiController.dext.dext in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 3C2DCF8D2C800C0D0099B4A8 /* ca.igregory.WiiController.dext.dext */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A18414A15BE8D3300F223E4 /* PBXContainerItemProxy */ = {
+		3C2DCF8A2C800C0D0099B4A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0A18413E15BE8D3300F223E4 /* WirtualJoy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 32D94FD00562CBF700B6AF17;
-			remoteInfo = wjoy;
-		};
-		0A18414C15BE8D3300F223E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A18413E15BE8D3300F223E4 /* WirtualJoy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0A46958E15B58CE1003AB8FD;
-			remoteInfo = WJoyTool;
-		};
-		0A18414E15BE8D3300F223E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A18413E15BE8D3300F223E4 /* WirtualJoy.xcodeproj */;
+			containerPortal = 3C2DCF7F2C800C0D0099B4A8 /* VirtualController.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 0A46960715B593A2003AB8FD;
-			remoteInfo = WirtualJoy;
+			remoteInfo = VirtualController;
 		};
-		0A18415015BE8D3300F223E4 /* PBXContainerItemProxy */ = {
+		3C2DCF8C2C800C0D0099B4A8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0A18413E15BE8D3300F223E4 /* WirtualJoy.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 0A4696CE15B5953E003AB8FD;
-			remoteInfo = Test;
-		};
-		0A18417F15BE8E0400F223E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = VHID;
-		};
-		0A18418115BE8E0700F223E4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A18413E15BE8D3300F223E4 /* WirtualJoy.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 0A46960615B593A2003AB8FD;
-			remoteInfo = WirtualJoy;
-		};
-		3CCE077D263E37C000E43B55 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0A18413E15BE8D3300F223E4 /* WirtualJoy.xcodeproj */;
+			containerPortal = 3C2DCF7F2C800C0D0099B4A8 /* VirtualController.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 3C3074CE263C76BD00661748;
 			remoteInfo = wiicontroller;
 		};
+		3C2DCFBC2C801E6A0099B4A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C2DCF7F2C800C0D0099B4A8 /* VirtualController.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C3074CD263C76BD00661748;
+			remoteInfo = virtualcontroller;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0A1841DC15BE906D00F223E4 /* Copy Frameworks */ = {
+		3C2DCFBF2C801F3A0099B4A8 /* Embed System Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstPath = "$(SYSTEM_EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
 			files = (
-				0A1841C115BE906200F223E4 /* VHID.framework in Copy Frameworks */,
-				0A1841C615BE906800F223E4 /* WirtualJoy.framework in Copy Frameworks */,
+				3C2DCFC02C801F5C0099B4A8 /* ca.igregory.WiiController.dext.dext in Embed System Extensions */,
 			);
-			name = "Copy Frameworks";
+			name = "Embed System Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0867D69BFE84028FC02AAC07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		0867D6A5FE840307C02AAC07 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		0A18412B15BE8C9000F223E4 /* VHIDButtonCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHIDButtonCollection.h; sourceTree = "<group>"; };
 		0A18412C15BE8C9000F223E4 /* VHIDButtonCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VHIDButtonCollection.m; sourceTree = "<group>"; };
 		0A18412D15BE8C9000F223E4 /* VHIDDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHIDDevice.h; sourceTree = "<group>"; };
 		0A18412E15BE8C9000F223E4 /* VHIDDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VHIDDevice.m; sourceTree = "<group>"; };
 		0A18412F15BE8C9000F223E4 /* VHIDPointerCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHIDPointerCollection.h; sourceTree = "<group>"; };
 		0A18413015BE8C9000F223E4 /* VHIDPointerCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VHIDPointerCollection.m; sourceTree = "<group>"; };
-		0A18413E15BE8D3300F223E4 /* WirtualJoy.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WirtualJoy.xcodeproj; path = ../WirtualJoy/WirtualJoy.xcodeproj; sourceTree = SOURCE_ROOT; };
-		0A18416515BE8D7C00F223E4 /* Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A18416715BE8D7C00F223E4 /* Test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Test-Info.plist"; sourceTree = "<group>"; };
 		0A18416F15BE8DAF00F223E4 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		0A18417215BE8DC500F223E4 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
@@ -108,20 +72,20 @@
 		0A18418515BE8E1700F223E4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A18443E15BE990D00F223E4 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
 		0A18443F15BE990D00F223E4 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
-		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		3C2DCF7F2C800C0D0099B4A8 /* VirtualController.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VirtualController.xcodeproj; path = ../WirtualJoy/VirtualController.xcodeproj; sourceTree = "<group>"; };
+		3C2DCFA02C801C730099B4A8 /* VHIDTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VHIDTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2DCFBA2C801E0C0099B4A8 /* VHIDTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = VHIDTest.entitlements; path = VHIDTest/VHIDTest.entitlements; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DC2EF5B0486A6940098B216 /* VHID.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VHID.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D2F7E79907B2D74100F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0A18416315BE8D7C00F223E4 /* Frameworks */ = {
+		3C2DCF9D2C801C730099B4A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A18416B15BE8D9800F223E4 /* Cocoa.framework in Frameworks */,
-				0A18416E15BE8D9A00F223E4 /* WirtualJoy.framework in Frameworks */,
-				0A1841AA15BE904400F223E4 /* VHID.framework in Frameworks */,
+				3C2DCFB92C801D9A0099B4A8 /* VirtualController.framework in Frameworks */,
+				3C2DCFB82C801D8C0099B4A8 /* VHID.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				8DC2EF5B0486A6940098B216 /* VHID.framework */,
-				0A18416515BE8D7C00F223E4 /* Test.app */,
+				3C2DCFA02C801C730099B4A8 /* VHIDTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,23 +111,14 @@
 		0867D691FE84028FC02AAC07 /* VHID */ = {
 			isa = PBXGroup;
 			children = (
-				0A18413E15BE8D3300F223E4 /* WirtualJoy.xcodeproj */,
+				3C2DCFBA2C801E0C0099B4A8 /* VHIDTest.entitlements */,
+				3C2DCF7F2C800C0D0099B4A8 /* VirtualController.xcodeproj */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
-				32C88DFF0371C24200C91783 /* Other Sources */,
 				089C1665FE841158C02AAC07 /* Resources */,
-				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
+				3C2DCFB72C801D8C0099B4A8 /* Frameworks */,
 			);
 			name = VHID;
-			sourceTree = "<group>";
-		};
-		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
-				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
-			);
-			name = "External Frameworks and Libraries";
 			sourceTree = "<group>";
 		};
 		089C1665FE841158C02AAC07 /* Resources */ = {
@@ -209,9 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				0A18416715BE8D7C00F223E4 /* Test-Info.plist */,
-				0A18416F15BE8DAF00F223E4 /* MainMenu.xib */,
 				0A18443E15BE990D00F223E4 /* TestView.h */,
 				0A18443F15BE990D00F223E4 /* TestView.m */,
+				0A18416F15BE8DAF00F223E4 /* MainMenu.xib */,
 				0A18417215BE8DC500F223E4 /* MainController.h */,
 				0A18417315BE8DC500F223E4 /* MainController.m */,
 				0A18418515BE8E1700F223E4 /* main.m */,
@@ -219,41 +173,20 @@
 			name = test;
 			sourceTree = "<group>";
 		};
-		0A18413F15BE8D3300F223E4 /* Products */ = {
+		3C2DCF802C800C0D0099B4A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0A18414B15BE8D3300F223E4 /* wjoy.kext */,
-				0A18414D15BE8D3300F223E4 /* WJoyTool */,
-				0A18414F15BE8D3300F223E4 /* WirtualJoy.framework */,
-				0A18415115BE8D3300F223E4 /* Test.app */,
-				3CCE077E263E37C000E43B55 /* ca.igregory.WiiController.dext.dext */,
+				3C2DCF8B2C800C0D0099B4A8 /* VirtualController.framework */,
+				3C2DCF8D2C800C0D0099B4A8 /* ca.igregory.WiiController.dext.dext */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */,
-			);
-			name = "Linked Frameworks";
-			sourceTree = "<group>";
-		};
-		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0867D6A5FE840307C02AAC07 /* AppKit.framework */,
-				D2F7E79907B2D74100F64583 /* CoreData.framework */,
-				0867D69BFE84028FC02AAC07 /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		32C88DFF0371C24200C91783 /* Other Sources */ = {
+		3C2DCFB72C801D8C0099B4A8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "Other Sources";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,24 +203,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0A18416415BE8D7C00F223E4 /* Test */ = {
+		3C2DCF9F2C801C730099B4A8 /* VHIDTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0A18416A15BE8D7D00F223E4 /* Build configuration list for PBXNativeTarget "Test" */;
+			buildConfigurationList = 3C2DCFAD2C801C760099B4A8 /* Build configuration list for PBXNativeTarget "VHIDTest" */;
 			buildPhases = (
-				0A18416115BE8D7C00F223E4 /* Resources */,
-				0A18416215BE8D7C00F223E4 /* Sources */,
-				0A18416315BE8D7C00F223E4 /* Frameworks */,
-				0A1841DC15BE906D00F223E4 /* Copy Frameworks */,
+				3C2DCF9C2C801C730099B4A8 /* Sources */,
+				3C2DCF9D2C801C730099B4A8 /* Frameworks */,
+				3C2DCF9E2C801C730099B4A8 /* Resources */,
+				3C2DCFBF2C801F3A0099B4A8 /* Embed System Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0A18418015BE8E0400F223E4 /* PBXTargetDependency */,
-				0A18418215BE8E0700F223E4 /* PBXTargetDependency */,
+				3C2DCFBD2C801E6A0099B4A8 /* PBXTargetDependency */,
 			);
-			name = Test;
-			productName = Test;
-			productReference = 0A18416515BE8D7C00F223E4 /* Test.app */;
+			name = VHIDTest;
+			productName = VHIDTest;
+			productReference = 3C2DCFA02C801C730099B4A8 /* VHIDTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8DC2EF4F0486A6940098B216 /* VHID */ = {
@@ -316,6 +248,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					3C2DCF9F2C801C730099B4A8 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "VHID" */;
 			compatibilityVersion = "Xcode 3.1";
@@ -333,62 +270,40 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 0A18413F15BE8D3300F223E4 /* Products */;
-					ProjectRef = 0A18413E15BE8D3300F223E4 /* WirtualJoy.xcodeproj */;
+					ProductGroup = 3C2DCF802C800C0D0099B4A8 /* Products */;
+					ProjectRef = 3C2DCF7F2C800C0D0099B4A8 /* VirtualController.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
 				8DC2EF4F0486A6940098B216 /* VHID */,
-				0A18416415BE8D7C00F223E4 /* Test */,
+				3C2DCF9F2C801C730099B4A8 /* VHIDTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		0A18414B15BE8D3300F223E4 /* wjoy.kext */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = wjoy.kext;
-			remoteRef = 0A18414A15BE8D3300F223E4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0A18414D15BE8D3300F223E4 /* WJoyTool */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = WJoyTool;
-			remoteRef = 0A18414C15BE8D3300F223E4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		0A18414F15BE8D3300F223E4 /* WirtualJoy.framework */ = {
+		3C2DCF8B2C800C0D0099B4A8 /* VirtualController.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = WirtualJoy.framework;
-			remoteRef = 0A18414E15BE8D3300F223E4 /* PBXContainerItemProxy */;
+			path = VirtualController.framework;
+			remoteRef = 3C2DCF8A2C800C0D0099B4A8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0A18415115BE8D3300F223E4 /* Test.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = Test.app;
-			remoteRef = 0A18415015BE8D3300F223E4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3CCE077E263E37C000E43B55 /* ca.igregory.WiiController.dext.dext */ = {
+		3C2DCF8D2C800C0D0099B4A8 /* ca.igregory.WiiController.dext.dext */ = {
 			isa = PBXReferenceProxy;
 			fileType = "wrapper.driver-extension";
 			path = ca.igregory.WiiController.dext.dext;
-			remoteRef = 3CCE077D263E37C000E43B55 /* PBXContainerItemProxy */;
+			remoteRef = 3C2DCF8C2C800C0D0099B4A8 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0A18416115BE8D7C00F223E4 /* Resources */ = {
+		3C2DCF9E2C801C730099B4A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A18417015BE8DAF00F223E4 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,13 +317,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0A18416215BE8D7C00F223E4 /* Sources */ = {
+		3C2DCF9C2C801C730099B4A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A18417415BE8DC500F223E4 /* MainController.m in Sources */,
-				0A18418615BE8E1700F223E4 /* main.m in Sources */,
-				0A18444015BE990D00F223E4 /* TestView.m in Sources */,
+				3C2DCFB62C801CE60099B4A8 /* MainMenu.xib in Sources */,
+				3C2DCFB22C801CCD0099B4A8 /* main.m in Sources */,
+				3C2DCFB02C801CC80099B4A8 /* TestView.m in Sources */,
+				3C2DCFB12C801CCB0099B4A8 /* MainController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,82 +341,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0A18418015BE8E0400F223E4 /* PBXTargetDependency */ = {
+		3C2DCFBD2C801E6A0099B4A8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8DC2EF4F0486A6940098B216 /* VHID */;
-			targetProxy = 0A18417F15BE8E0400F223E4 /* PBXContainerItemProxy */;
-		};
-		0A18418215BE8E0700F223E4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = WirtualJoy;
-			targetProxy = 0A18418115BE8E0700F223E4 /* PBXContainerItemProxy */;
+			name = virtualcontroller;
+			targetProxy = 3C2DCFBC2C801E6A0099B4A8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0A18416815BE8D7D00F223E4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 3;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				HEADER_SEARCH_PATHS = ../;
-				INFOPLIST_FILE = "Test-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
-				MARKETING_VERSION = 3.0.0;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alxn1.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Test;
-			};
-			name = Debug;
-		};
-		0A18416915BE8D7D00F223E4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "-";
-				COPY_PHASE_STRIP = YES;
-				CURRENT_PROJECT_VERSION = 3;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/AppKit.framework/Headers/AppKit.h";
-				HEADER_SEARCH_PATHS = ../;
-				INFOPLIST_FILE = "Test-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
-				MARKETING_VERSION = 3.0.0;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alxn1.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Test;
-				ZERO_LINK = NO;
-			};
-			name = Release;
-		};
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
@@ -513,7 +368,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MARKETING_VERSION = 3.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alxn1.${PRODUCT_NAME:rfc1034Identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.igregory.VHID;
 				PRODUCT_NAME = VHID;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = framework;
@@ -525,8 +380,8 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
@@ -537,7 +392,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MARKETING_VERSION = 3.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.alxn1.${PRODUCT_NAME:rfc1034Identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = ca.igregory.VHID;
 				PRODUCT_NAME = VHID;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = framework;
@@ -619,18 +474,101 @@
 			};
 			name = Release;
 		};
+		3C2DCFAE2C801C760099B4A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = VHIDTest/VHIDTest.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.igregory.VHIDTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		3C2DCFAF2C801C760099B4A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = VHIDTest/VHIDTest.entitlements;
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.igregory.VHIDTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A18416A15BE8D7D00F223E4 /* Build configuration list for PBXNativeTarget "Test" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0A18416815BE8D7D00F223E4 /* Debug */,
-				0A18416915BE8D7D00F223E4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "VHID" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -645,6 +583,15 @@
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,
 				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C2DCFAD2C801C760099B4A8 /* Build configuration list for PBXNativeTarget "VHIDTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C2DCFAE2C801C760099B4A8 /* Debug */,
+				3C2DCFAF2C801C760099B4A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

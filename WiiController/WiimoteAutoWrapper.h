@@ -7,7 +7,7 @@
 //
 
 #import <Wiimote/Wiimote.h>
-#import <WirtualJoy/WJoyDevice.h>
+#import <WirtualJoy/VirtualControllerDevice.h>
 #import <VHID/VHIDDevice.h>
 
 #import "ProfileProvider.h"

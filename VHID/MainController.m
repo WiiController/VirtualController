@@ -16,17 +16,17 @@
     if(self == nil)
         return nil;
     
-    _mouseState    = [[VHIDDevice alloc] initWithType:VHIDDeviceTypeMouse
-                                          pointerCount:6
-                                           buttonCount:2
-                                            isRelative:YES];
+    _deviceState    = [[VHIDDevice alloc] initWithType:VHIDDeviceTypeJoystick
+                                          pointerCount:(2 + 1)
+                                           buttonCount:(11 + 15)
+                                            isRelative:NO];
 
-    NSLog(@"%@", _mouseState);
-    _virtualMouse  = [[WJoyDevice alloc] initWithHIDDescriptor:[_mouseState descriptor]
-                                                  productString:@"Virtual Alxn1 Mouse"];
+    NSLog(@"%@", _deviceState);
+    _virtualDevice  = [[VirtualControllerDevice alloc] initWithHIDDescriptor:[_deviceState descriptor]
+                                                  productString:@"My custom virtual gamepad"];
 
-    [_mouseState setDelegate:self];
-    if(_virtualMouse == nil || _mouseState == nil)
+    [_deviceState setDelegate:self];
+    if(_virtualDevice == nil || _deviceState == nil)
         NSLog(@"error");
 
     return self;
@@ -34,40 +34,43 @@
 
 - (void)dealloc
 {
-    [_mouseState release];
-    [_virtualMouse release];
+    [_deviceState release];
+    [_virtualDevice release];
     [super dealloc];
 }
 
 - (void)VHIDDevice:(VHIDDevice*)device stateChanged:(NSData*)state
 {
-    [_virtualMouse updateHIDState:state];
+    [_virtualDevice updateHIDState:state];
 }
 
 - (void)testView:(TestView*)view keyPressed:(TestViewKey)key
 {
-    NSPoint newPosition = NSZeroPoint;
-
-    switch(key)
-    {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSPoint newPosition = NSZeroPoint;
+        
+        switch(key)
+        {
         case TestViewKeyUp:
             newPosition.y += 0.025f;
             break;
-
+            
         case TestViewKeyDown:
             newPosition.y -= 0.025f;
             break;
-
+            
         case TestViewKeyLeft:
             newPosition.x -= 0.025f;
             break;
-
+            
         case TestViewKeyRight:
             newPosition.x += 0.025f;
             break;
-    }
-
-    [_mouseState setPointer:0 position:newPosition];
+        }
+        
+        [_deviceState setPointer:0 position:newPosition];
+        [_deviceState setButton:key pressed:!!arc4random_uniform(2)];
+    });
 }
 
 @end

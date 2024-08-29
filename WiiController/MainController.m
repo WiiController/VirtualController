@@ -9,7 +9,6 @@
 #import "MainController.h"
 #import "WiimoteAutoWrapper.h"
 #import "StatusBarItemController.h"
-#import "NotificationCenter.h"
 #import "WiimoteLEDsController.h"
 
 #import <Sparkle/Sparkle.h>
@@ -19,7 +18,6 @@
 - (void)awakeFromNib
 {
     [SUUpdater sharedUpdater];
-    [NotificationCenter start];
     [WiimoteLEDsController start];
     __auto_type statusBarItemController = [StatusBarItemController start];
     [WiimoteAutoWrapper setMaxConnectedDevices:4];

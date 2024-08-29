@@ -13,12 +13,6 @@
 #define HIDDescriptorMouseAdditionalBytes 12
 #define HIDDescriptorJoystickAdditionalBytes 10
 
-@interface VHIDDevice (PrivatePart)
-
-- (NSData *)createDescriptor;
-
-@end
-
 @implementation VHIDDevice
 
 + (NSUInteger)maxButtonCount
@@ -169,10 +163,6 @@
 {
     _delegate = obj;
 }
-
-@end
-
-@implementation VHIDDevice (PrivatePart)
 
 - (NSData *)createDescriptor
 {

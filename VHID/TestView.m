@@ -25,22 +25,22 @@
     return NO;
 }
 
-- (void)moveRight:(id)sender
+- (IBAction)moveRight:(id)sender
 {
     [_delegate testView:self keyPressed:TestViewKeyRight];
 }
 
-- (void)moveLeft:(id)sender
+- (IBAction)moveLeft:(id)sender
 {
     [_delegate testView:self keyPressed:TestViewKeyLeft];
 }
 
-- (void)moveUp:(id)sender
+- (IBAction)moveUp:(id)sender
 {
     [_delegate testView:self keyPressed:TestViewKeyUp];
 }
 
-- (void)moveDown:(id)sender
+- (IBAction)moveDown:(id)sender
 {
     [_delegate testView:self keyPressed:TestViewKeyDown];
 }

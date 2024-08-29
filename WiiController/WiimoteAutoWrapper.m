@@ -22,7 +22,7 @@
     Wiimote *_device;
     VHIDDevice *_hidState;
     NSPoint _shiftsState;
-    WJoyDevice *_wJoy;
+    VirtualControllerDevice *_wJoy;
     // For calibration of the analog sticks
     NSPoint uProMinL, uProMaxL, uProMinR, uProMaxR;
     NSPoint heroGuitarMinStick, heroGuitarMaxStick;
@@ -60,7 +60,7 @@ static id<ProfileProvider> profileProvider;
 
 + (void)start
 {
-    if (![WJoyDevice prepare])
+    if (![VirtualControllerDevice prepare])
     {
         [[NSApplication sharedApplication] terminate:self];
         return;
@@ -285,7 +285,7 @@ static id<ProfileProvider> profileProvider;
                                      buttonCount:WiimoteButtonCount + WiimoteClassicControllerButtonCount
                                       isRelative:NO];
 
-    _wJoy = [[WJoyDevice alloc]
+    _wJoy = [[VirtualControllerDevice alloc]
         initWithHIDDescriptor:[_hidState descriptor]
                 productString:[WiimoteAutoWrapper wjoyNameFromWiimote:device]];
 

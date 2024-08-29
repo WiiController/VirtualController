@@ -1,15 +1,13 @@
 //
 //  DextManager.m
-//  WirtualJoy
-//
-//  Created by Ian Gregory on 30 Apr ’21.
+//  VirtualController
 //
 
 #import "DextManager.h"
 
 #import <SystemExtensions/SystemExtensions.h>
 
-static NSString *const driverExtensionIdentifier = @"ca.igregory.WiiController.dext";
+static NSString *const driverExtensionIdentifier = @"ca.igregory.VirtualController.dext";
 
 API_AVAILABLE(macos(10.15))
 @interface DextManagerExtensionRequestDelegate : NSObject <OSSystemExtensionRequestDelegate>
@@ -27,21 +25,21 @@ API_AVAILABLE(macos(10.15))
 }
 
 - (OSSystemExtensionReplacementAction)request:(OSSystemExtensionRequest *)request actionForReplacingExtension:(OSSystemExtensionProperties *)existing withExtension:(OSSystemExtensionProperties *)ext {
-    NSLog(@"WiiController DEXT request: Replacing existing extension");
+    NSLog(@"VirtualController DEXT request: Replacing existing extension");
     return OSSystemExtensionReplacementActionReplace;
 }
 
 - (void)requestNeedsUserApproval:(OSSystemExtensionRequest *)request {
-    NSLog(@"WiiController DEXT request: Needs user approval");
+    NSLog(@"VirtualController DEXT request: Needs user approval");
 }
 
 - (void)request:(OSSystemExtensionRequest *)request didFinishWithResult:(OSSystemExtensionRequestResult)result {
-    NSLog(@"WiiController DEXT request: Succeeded with result: %ld", (long)result);
+    NSLog(@"VirtualController DEXT request: Succeeded with result: %ld", (long)result);
     _requestSucceeded = YES;
     dispatch_semaphore_signal(_sema);
 }
 - (void)request:(OSSystemExtensionRequest *)request didFailWithError:(NSError *)error {
-    NSLog(@"WiiController DEXT request: Failed with error: %@", error);
+    NSLog(@"VirtualController DEXT request: Failed with error: %@", error);
     _requestSucceeded = NO;
     dispatch_semaphore_signal(_sema);
 }

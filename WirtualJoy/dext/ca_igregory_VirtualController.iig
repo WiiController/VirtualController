@@ -1,0 +1,20 @@
+//
+//  Service.iig
+//  virtualcontroller
+//
+
+#ifndef VirtualControllerService_h
+#define VirtualControllerService_h
+
+#include <Availability.h>
+#include <DriverKit/IOService.iig>
+
+class ca_igregory_VirtualController : public IOService
+{
+public:
+    virtual kern_return_t Start(IOService *provider) override;
+    
+    virtual kern_return_t NewUserClient(uint32_t type, IOUserClient **userClient) override;
+};
+
+#endif /* VirtualControllerService_h */
