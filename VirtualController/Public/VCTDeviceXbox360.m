@@ -40,8 +40,6 @@
         return nil;
     }
     
-    [_deviceState setPointer:0 position:NSMakePoint(0.5, 0.5)];
-    
     return self;
 }
 
