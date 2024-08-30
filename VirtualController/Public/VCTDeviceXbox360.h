@@ -1,5 +1,3 @@
-@class VCTDeviceState;
-
 NS_ASSUME_NONNULL_BEGIN
 
 typedef struct {
@@ -15,8 +13,6 @@ typedef struct {
 - (instancetype)initWithName:(NSString *)name serial:(NSString *)serial;
 
 - (void)setState:(VCTDeviceStateXbox360 *)state;
-
-@property(readonly) VCTDeviceState *deviceState;
 
 @end
 
