@@ -25,6 +25,8 @@
 		3C4C3EB32C814F7300A49D47 /* VHIDDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C3EB22C814F7300A49D47 /* VHIDDevice.m */; };
 		3C4C3EB52C814FF400A49D47 /* VHIDButtonCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C3EAD2C814F6B00A49D47 /* VHIDButtonCollection.m */; };
 		3C4C3EB62C814FF600A49D47 /* VHIDPointerCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C3EAF2C814F6B00A49D47 /* VHIDPointerCollection.m */; };
+		3CFAFF0B2C81528C007F4D7B /* VCTDeviceXbox360.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFAFF0A2C81528C007F4D7B /* VCTDeviceXbox360.m */; };
+		3CFAFF0C2C8158C2007F4D7B /* VCTDeviceXbox360.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CFAFF092C81528C007F4D7B /* VCTDeviceXbox360.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,8 @@
 		3C4C3EB12C814F7300A49D47 /* VHIDDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHIDDevice.h; sourceTree = "<group>"; };
 		3C4C3EB22C814F7300A49D47 /* VHIDDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VHIDDevice.m; sourceTree = "<group>"; };
 		3CB6CCFB249C51FD002B2FAA /* wirtual_joy_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wirtual_joy_helper.h; sourceTree = "<group>"; };
+		3CFAFF092C81528C007F4D7B /* VCTDeviceXbox360.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCTDeviceXbox360.h; sourceTree = "<group>"; };
+		3CFAFF0A2C81528C007F4D7B /* VCTDeviceXbox360.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCTDeviceXbox360.m; sourceTree = "<group>"; };
 		8DA8362C06AD9B9200E5AC22 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +152,8 @@
 				0A4691EB15B56A2A003AB8FD /* internal */,
 				3C4C3EB12C814F7300A49D47 /* VHIDDevice.h */,
 				3C4C3EB22C814F7300A49D47 /* VHIDDevice.m */,
+				3CFAFF092C81528C007F4D7B /* VCTDeviceXbox360.h */,
+				3CFAFF0A2C81528C007F4D7B /* VCTDeviceXbox360.m */,
 				3C4C3EB02C814F6B00A49D47 /* VHID internal */,
 				0A4691E715B56A1A003AB8FD /* VirtualControllerDevice.h */,
 				0A4691E815B56A1A003AB8FD /* VirtualControllerDevice.m */,
@@ -220,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A46961415B593D4003AB8FD /* VirtualControllerDevice.h in Headers */,
+				3CFAFF0C2C8158C2007F4D7B /* VCTDeviceXbox360.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +324,7 @@
 				0A46962315B593E7003AB8FD /* VirtualControllerDevice.m in Sources */,
 				3C4C3EB32C814F7300A49D47 /* VHIDDevice.m in Sources */,
 				3C2B85BF263CF6C600713A24 /* DextManager.m in Sources */,
+				3CFAFF0B2C81528C007F4D7B /* VCTDeviceXbox360.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

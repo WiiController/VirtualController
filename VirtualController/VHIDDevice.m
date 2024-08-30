@@ -154,16 +154,6 @@
     return _state;
 }
 
-- (id<VHIDDeviceDelegate>)delegate
-{
-    return _delegate;
-}
-
-- (void)setDelegate:(id<VHIDDeviceDelegate>)obj
-{
-    _delegate = obj;
-}
-
 - (NSData *)createDescriptor
 {
     BOOL isMouse = (_type == VHIDDeviceTypeMouse);

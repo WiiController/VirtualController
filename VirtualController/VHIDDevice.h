@@ -62,7 +62,6 @@ typedef enum
 - (NSData *)descriptor;
 - (NSData *)state;
 
-- (id<VHIDDeviceDelegate>)delegate;
-- (void)setDelegate:(id<VHIDDeviceDelegate>)obj;
+@property() id<VHIDDeviceDelegate> delegate;
 
 @end
