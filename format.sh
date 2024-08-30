@@ -2,18 +2,10 @@
 
 cd $(dirname "$0")
 
-cd WiiController
+cd VHIDTest
 clang-format -i *.{h,m}
 cd ..
 
-cd Wiimote
+cd VirtualController
 clang-format -i *.{h,m}
-cd ..
-
-cd VHID
-clang-format -i {VHIDDevice,VHIDButtonCollection,VHIDPointerCollection}.{h,m}
-cd ..
-
-cd WirtualJoy
-clang-format -i {WJoyDevice,WJoyDeviceImpl,WJoyTool,WJoyAdminToolRight,WJoyToolMain,STPrivilegedTask,WJoyToolInterface}.{h,m}
 cd ..

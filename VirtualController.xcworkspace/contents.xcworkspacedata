@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:VHID/VHID.xcodeproj">
+      location = "group:VHIDTest/VHIDTest.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/ian/GitHub/VirtualController/WirtualJoy/VirtualController.xcodeproj">
+      location = "group:VirtualController/VirtualController.xcodeproj">
    </FileRef>
 </Workspace>
