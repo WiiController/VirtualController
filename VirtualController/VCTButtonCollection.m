@@ -1,12 +1,4 @@
-//
-//  VHIDButtonCollection.m
-//  VHID
-//
-//  Created by alxn1 on 23.07.12.
-//  Copyright 2012 alxn1. All rights reserved.
-//
-
-#import "VHIDButtonCollection.h"
+#import "VCTButtonCollection.h"
 
 #define HIDDescriptorSizeWithPadding 22
 #define HIDDescriptorSizeWithoutPadding 16
@@ -15,7 +7,13 @@ static const unsigned char buttonMasks[] = {
     1, 2, 4, 8, 16, 32, 64, 128
 };
 
-@implementation VHIDButtonCollection
+@implementation VCTButtonCollection
+{
+@private
+    NSUInteger _buttonCount;
+    NSData *_descriptor;
+    NSMutableData *_state;
+}
 
 + (NSData *)descriptorWithButtonCount:(NSUInteger)buttonCount
                             stateSize:(NSUInteger *)stateSize
@@ -93,7 +91,7 @@ static const unsigned char buttonMasks[] = {
     if (self == nil)
         return nil;
 
-    if (buttonCount == 0 || buttonCount > [VHIDButtonCollection maxButtonCount])
+    if (buttonCount == 0 || buttonCount > [VCTButtonCollection maxButtonCount])
     {
         return nil;
     }
@@ -101,7 +99,7 @@ static const unsigned char buttonMasks[] = {
     NSUInteger stateSize = 0;
 
     _buttonCount = buttonCount;
-    _descriptor = [VHIDButtonCollection descriptorWithButtonCount:buttonCount
+    _descriptor = [VCTButtonCollection descriptorWithButtonCount:buttonCount
                                                         stateSize:&stateSize];
 
     _state = [[NSMutableData alloc] initWithLength:stateSize];

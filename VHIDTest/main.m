@@ -1,14 +1,14 @@
 #import <Cocoa/Cocoa.h>
 
-@class VHIDDevice;
+@class VCTDeviceState;
 
 @protocol VHIDDeviceDelegate
 
-- (void)VHIDDevice:(VHIDDevice*)device stateChanged:(NSData*)state;
+- (void)VHIDDevice:(VCTDeviceState*)device stateChanged:(NSData*)state;
 
 @end
 
-@interface VHIDDevice : NSObject
+@interface VCTDeviceState : NSObject
 {
     @private
         NSData                  *_descriptor;
@@ -32,7 +32,7 @@ typedef enum VHIDMouseButtonType {
     VHIDMouseButtonTypeRight
 } VHIDMouseButtonType;
 
-@interface VHIDMouse : VHIDDevice
+@interface VHIDMouse : VCTDeviceState
 
 - (BOOL)isButtonPressed:(VHIDMouseButtonType)button;
 - (void)setButton:(VHIDMouseButtonType)button pressed:(BOOL)pressed;
@@ -41,7 +41,7 @@ typedef enum VHIDMouseButtonType {
 
 @end
 
-@interface VHIDKeyboard : VHIDDevice
+@interface VHIDKeyboard : VCTDeviceState
 
 @end
 
@@ -76,7 +76,7 @@ typedef enum VHIDJoystickAxisValueType {
 
 #define VHIDJoystickMaxButtonCount 255
 
-@interface VHIDJoystick : VHIDDevice
+@interface VHIDJoystick : VCTDeviceState
 
 - (id)initWithButtonCount:(NSUInteger)buttonCount
                      axes:(VHIDJoystickAxisSet*)axes;

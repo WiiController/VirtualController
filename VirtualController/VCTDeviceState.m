@@ -1,28 +1,20 @@
-//
-//  VHIDDevice.m
-//  VHID
-//
-//  Created by alxn1 on 23.07.12.
-//  Copyright 2012 alxn1. All rights reserved.
-//
-
-#import "VHIDDevice.h"
-#import "VHIDButtonCollection.h"
-#import "VHIDPointerCollection.h"
+#import "VCTDeviceState.h"
+#import "VCTButtonCollection.h"
+#import "VCTPointerCollection.h"
 
 #define HIDDescriptorMouseAdditionalBytes 12
 #define HIDDescriptorJoystickAdditionalBytes 10
 
-@implementation VHIDDevice
+@implementation VCTDeviceState
 
 + (NSUInteger)maxButtonCount
 {
-    return [VHIDButtonCollection maxButtonCount];
+    return [VCTButtonCollection maxButtonCount];
 }
 
 + (NSUInteger)maxPointerCount
 {
-    return [VHIDPointerCollection maxPointerCount];
+    return [VCTPointerCollection maxPointerCount];
 }
 
 - (id)initWithType:(VHIDDeviceType)type
@@ -33,8 +25,8 @@
     self = [super init];
 
     _type = type;
-    _buttons = [[VHIDButtonCollection alloc] initWithButtonCount:buttonCount];
-    _pointers = [[VHIDPointerCollection alloc] initWithPointerCount:pointerCount
+    _buttons = [[VCTButtonCollection alloc] initWithButtonCount:buttonCount];
+    _pointers = [[VCTPointerCollection alloc] initWithPointerCount:pointerCount
                                                          isRelative:isRelative];
 
     _state = [[NSMutableData alloc]

@@ -73,7 +73,7 @@ kern_return_t createBufferMemoryDescriptorWithZeros(uint64_t length, uint64_t op
 }
 
 // Generated from:
-// [[[[VHIDDevice alloc] initWithType:VHIDDeviceTypeJoystick pointerCount:3 buttonCount:26 isRelative:NO] descriptor] writeToFile:@"/some/path/JoyHIDDescriptor" atomically:YES];
+// [[[[VCTDeviceState alloc] initWithType:VHIDDeviceTypeJoystick pointerCount:3 buttonCount:26 isRelative:NO] descriptor] writeToFile:@"/some/path/JoyHIDDescriptor" atomically:YES];
 // xxd -i /some/path/JoyHIDDescriptor
 constexpr unsigned char defaultJoystickReportDescriptorData[] = {
   0x05, 0x01, 0x09, 0x05, 0xa1, 0x01, 0xa1, 0x00, 0x05, 0x09, 0x19, 0x01,

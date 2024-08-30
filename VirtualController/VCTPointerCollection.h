@@ -1,21 +1,4 @@
-//
-//  VHIDPointerCollection.h
-//  VHID
-//
-//  Created by alxn1 on 23.07.12.
-//  Copyright 2012 alxn1. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
-@interface VHIDPointerCollection : NSObject
-{
-@private
-    NSUInteger _pointerCount;
-    BOOL _isRelative;
-    NSData *_descriptor;
-    NSMutableData *_state;
-}
+@interface VCTPointerCollection : NSObject
 
 + (NSUInteger)maxPointerCount;
 

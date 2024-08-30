@@ -1,12 +1,4 @@
-//
-//  VHIDPointerCollection.m
-//  VHID
-//
-//  Created by alxn1 on 23.07.12.
-//  Copyright 2012 alxn1. All rights reserved.
-//
-
-#import "VHIDPointerCollection.h"
+#import "VCTPointerCollection.h"
 
 #define HIDStatePointerSize 2
 
@@ -17,7 +9,14 @@
 #define HIDDescriptorMaxPointersBase 3
 #define HIDDescriptorMaxPointersBase2 3
 
-@implementation VHIDPointerCollection
+@implementation VCTPointerCollection
+{
+@private
+    NSUInteger _pointerCount;
+    BOOL _isRelative;
+    NSData *_descriptor;
+    NSMutableData *_state;
+}
 
 + (float)clipCoordinateFrom:(float)value
 {
@@ -76,7 +75,7 @@
     data++; //  USAGE_PAGE (Generic Desktop)
     for (NSUInteger i = 0; i < countCoordinates; i++)
     {
-        coordinateIndex = [VHIDPointerCollection translatePointerCoordinateIndex:i];
+        coordinateIndex = [VCTPointerCollection translatePointerCoordinateIndex:i];
         *data = 0x09;
         data++;
         *data = coordinateIndex;
@@ -118,7 +117,7 @@
     if (self == nil)
         return nil;
 
-    if (pointerCount == 0 || pointerCount > [VHIDPointerCollection maxPointerCount])
+    if (pointerCount == 0 || pointerCount > [VCTPointerCollection maxPointerCount])
     {
         return nil;
     }
@@ -127,7 +126,7 @@
 
     _pointerCount = pointerCount;
     _isRelative = isRelative;
-    _descriptor = [VHIDPointerCollection descriptorWithPointerCount:pointerCount
+    _descriptor = [VCTPointerCollection descriptorWithPointerCount:pointerCount
                                                          isRelative:isRelative
                                                           stateSize:&stateSize];
 
@@ -156,8 +155,8 @@
     char *data = (char *)[_state mutableBytes] + pointerIndex * HIDStatePointerSize;
 
     return NSMakePoint(
-        [VHIDPointerCollection clipCoordinateFrom:*data],
-        -[VHIDPointerCollection clipCoordinateFrom:*(data + 1)]);
+        [VCTPointerCollection clipCoordinateFrom:*data],
+        -[VCTPointerCollection clipCoordinateFrom:*(data + 1)]);
 }
 
 - (void)setPointer:(NSUInteger)pointerIndex position:(NSPoint)position
@@ -167,8 +166,8 @@
 
     char *data = (char *)[_state mutableBytes] + pointerIndex * HIDStatePointerSize;
 
-    *data = [VHIDPointerCollection clipCoordinateTo:position.x];
-    *(data + 1) = -[VHIDPointerCollection clipCoordinateTo:position.y];
+    *data = [VCTPointerCollection clipCoordinateTo:position.x];
+    *(data + 1) = -[VCTPointerCollection clipCoordinateTo:position.y];
 }
 
 - (void)reset

@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A46961415B593D4003AB8FD /* VirtualControllerDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A4691E715B56A1A003AB8FD /* VirtualControllerDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A46962215B593E7003AB8FD /* VirtualControllerDeviceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4691EF15B56A51003AB8FD /* VirtualControllerDeviceImpl.m */; };
-		0A46962315B593E7003AB8FD /* VirtualControllerDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4691E815B56A1A003AB8FD /* VirtualControllerDevice.m */; };
+		0A46961415B593D4003AB8FD /* VCTDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A4691E715B56A1A003AB8FD /* VCTDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A46962215B593E7003AB8FD /* VCTDeviceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4691EF15B56A51003AB8FD /* VCTDeviceImpl.m */; };
+		0A46962315B593E7003AB8FD /* VCTDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A4691E815B56A1A003AB8FD /* VCTDevice.m */; };
 		0A46966815B593F6003AB8FD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1CB32615B022BD0012FCC7 /* IOKit.framework */; };
 		0A46966915B593F6003AB8FD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A46925815B571F7003AB8FD /* Security.framework */; };
-		3C2B85BF263CF6C600713A24 /* DextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B85BD263CF6C600713A24 /* DextManager.m */; };
+		3C2B85BF263CF6C600713A24 /* VCTDextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2B85BD263CF6C600713A24 /* VCTDextManager.m */; };
 		3C2DCF8F2C800DF00099B4A8 /* SystemExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DCF8E2C800DF00099B4A8 /* SystemExtensions.framework */; };
 		3C2DCF902C8012AF0099B4A8 /* DriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C3074CF263C76BD00661748 /* DriverKit.framework */; };
 		3C2DCF9B2C801A4A0099B4A8 /* HIDDriverKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C2DCF9A2C8013DC0099B4A8 /* HIDDriverKit.framework */; };
@@ -22,9 +22,9 @@
 		3C3074EB263C94E300661748 /* ca_igregory_VirtualController_UserClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C3074EA263C94E300661748 /* ca_igregory_VirtualController_UserClient.cpp */; };
 		3C3074F5263CA94000661748 /* ca_igregory_VirtualController_Device.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C3074F4263CA94000661748 /* ca_igregory_VirtualController_Device.cpp */; };
 		3C3074FB263CA94800661748 /* ca_igregory_VirtualController_Device.iig in Sources */ = {isa = PBXBuildFile; fileRef = 3C3074FA263CA94800661748 /* ca_igregory_VirtualController_Device.iig */; };
-		3C4C3EB32C814F7300A49D47 /* VHIDDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C3EB22C814F7300A49D47 /* VHIDDevice.m */; };
-		3C4C3EB52C814FF400A49D47 /* VHIDButtonCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C3EAD2C814F6B00A49D47 /* VHIDButtonCollection.m */; };
-		3C4C3EB62C814FF600A49D47 /* VHIDPointerCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C3EAF2C814F6B00A49D47 /* VHIDPointerCollection.m */; };
+		3C4C3EB32C814F7300A49D47 /* VCTDeviceState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C3EB22C814F7300A49D47 /* VCTDeviceState.m */; };
+		3C4C3EB52C814FF400A49D47 /* VCTButtonCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C3EAD2C814F6B00A49D47 /* VCTButtonCollection.m */; };
+		3C4C3EB62C814FF600A49D47 /* VCTPointerCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C3EAF2C814F6B00A49D47 /* VCTPointerCollection.m */; };
 		3CFAFF0B2C81528C007F4D7B /* VCTDeviceXbox360.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFAFF0A2C81528C007F4D7B /* VCTDeviceXbox360.m */; };
 		3CFAFF0C2C8158C2007F4D7B /* VCTDeviceXbox360.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CFAFF092C81528C007F4D7B /* VCTDeviceXbox360.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -47,18 +47,18 @@
 		0A1CB32615B022BD0012FCC7 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		0A1CB50315B03FA10012FCC7 /* wirtual_joy_device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wirtual_joy_device.h; sourceTree = "<group>"; };
 		0A1CB50415B03FA10012FCC7 /* wirtual_joy_device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = wirtual_joy_device.cpp; sourceTree = "<group>"; };
-		0A4691E715B56A1A003AB8FD /* VirtualControllerDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualControllerDevice.h; sourceTree = "<group>"; };
-		0A4691E815B56A1A003AB8FD /* VirtualControllerDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirtualControllerDevice.m; sourceTree = "<group>"; };
-		0A4691EE15B56A51003AB8FD /* VirtualControllerDeviceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualControllerDeviceImpl.h; sourceTree = "<group>"; };
-		0A4691EF15B56A51003AB8FD /* VirtualControllerDeviceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirtualControllerDeviceImpl.m; sourceTree = "<group>"; };
+		0A4691E715B56A1A003AB8FD /* VCTDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCTDevice.h; sourceTree = "<group>"; };
+		0A4691E815B56A1A003AB8FD /* VCTDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCTDevice.m; sourceTree = "<group>"; };
+		0A4691EE15B56A51003AB8FD /* VCTDeviceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCTDeviceImpl.h; sourceTree = "<group>"; };
+		0A4691EF15B56A51003AB8FD /* VCTDeviceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCTDeviceImpl.m; sourceTree = "<group>"; };
 		0A46925815B571F7003AB8FD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		0A46960715B593A2003AB8FD /* VirtualController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirtualController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A46960815B593A2003AB8FD /* VirtualController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VirtualController-Info.plist"; sourceTree = "<group>"; };
 		0A469B1115B5AD59003AB8FD /* wirtual_joy_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wirtual_joy_config.h; sourceTree = "<group>"; };
 		0A469B1215B5AD59003AB8FD /* wirtual_joy_debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wirtual_joy_debug.h; sourceTree = "<group>"; };
 		32D94FCF0562CBF700B6AF17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3C2B85BC263CF6C600713A24 /* DextManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DextManager.h; sourceTree = "<group>"; };
-		3C2B85BD263CF6C600713A24 /* DextManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DextManager.m; sourceTree = "<group>"; };
+		3C2B85BC263CF6C600713A24 /* VCTDextManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCTDextManager.h; sourceTree = "<group>"; };
+		3C2B85BD263CF6C600713A24 /* VCTDextManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCTDextManager.m; sourceTree = "<group>"; };
 		3C2DCF8E2C800DF00099B4A8 /* SystemExtensions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemExtensions.framework; path = System/Library/Frameworks/SystemExtensions.framework; sourceTree = SDKROOT; };
 		3C2DCF9A2C8013DC0099B4A8 /* HIDDriverKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HIDDriverKit.framework; path = Platforms/DriverKit.platform/Developer/SDKs/DriverKit.sdk/System/DriverKit/System/Library/Frameworks/HIDDriverKit.framework; sourceTree = DEVELOPER_DIR; };
 		3C3074CE263C76BD00661748 /* ca.igregory.VirtualController.dext.dext */ = {isa = PBXFileReference; explicitFileType = "wrapper.driver-extension"; includeInIndex = 0; path = ca.igregory.VirtualController.dext.dext; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,12 +71,12 @@
 		3C3074EA263C94E300661748 /* ca_igregory_VirtualController_UserClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ca_igregory_VirtualController_UserClient.cpp; sourceTree = "<group>"; };
 		3C3074F4263CA94000661748 /* ca_igregory_VirtualController_Device.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ca_igregory_VirtualController_Device.cpp; sourceTree = "<group>"; };
 		3C3074FA263CA94800661748 /* ca_igregory_VirtualController_Device.iig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.iig; path = ca_igregory_VirtualController_Device.iig; sourceTree = "<group>"; };
-		3C4C3EAC2C814F6B00A49D47 /* VHIDButtonCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHIDButtonCollection.h; sourceTree = "<group>"; };
-		3C4C3EAD2C814F6B00A49D47 /* VHIDButtonCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VHIDButtonCollection.m; sourceTree = "<group>"; };
-		3C4C3EAE2C814F6B00A49D47 /* VHIDPointerCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHIDPointerCollection.h; sourceTree = "<group>"; };
-		3C4C3EAF2C814F6B00A49D47 /* VHIDPointerCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VHIDPointerCollection.m; sourceTree = "<group>"; };
-		3C4C3EB12C814F7300A49D47 /* VHIDDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHIDDevice.h; sourceTree = "<group>"; };
-		3C4C3EB22C814F7300A49D47 /* VHIDDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VHIDDevice.m; sourceTree = "<group>"; };
+		3C4C3EAC2C814F6B00A49D47 /* VCTButtonCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCTButtonCollection.h; sourceTree = "<group>"; };
+		3C4C3EAD2C814F6B00A49D47 /* VCTButtonCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCTButtonCollection.m; sourceTree = "<group>"; };
+		3C4C3EAE2C814F6B00A49D47 /* VCTPointerCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCTPointerCollection.h; sourceTree = "<group>"; };
+		3C4C3EAF2C814F6B00A49D47 /* VCTPointerCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCTPointerCollection.m; sourceTree = "<group>"; };
+		3C4C3EB12C814F7300A49D47 /* VCTDeviceState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCTDeviceState.h; sourceTree = "<group>"; };
+		3C4C3EB22C814F7300A49D47 /* VCTDeviceState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCTDeviceState.m; sourceTree = "<group>"; };
 		3CB6CCFB249C51FD002B2FAA /* wirtual_joy_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wirtual_joy_helper.h; sourceTree = "<group>"; };
 		3CFAFF092C81528C007F4D7B /* VCTDeviceXbox360.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCTDeviceXbox360.h; sourceTree = "<group>"; };
 		3CFAFF0A2C81528C007F4D7B /* VCTDeviceXbox360.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCTDeviceXbox360.m; sourceTree = "<group>"; };
@@ -150,13 +150,13 @@
 			isa = PBXGroup;
 			children = (
 				0A4691EB15B56A2A003AB8FD /* internal */,
-				3C4C3EB12C814F7300A49D47 /* VHIDDevice.h */,
-				3C4C3EB22C814F7300A49D47 /* VHIDDevice.m */,
+				3C4C3EB12C814F7300A49D47 /* VCTDeviceState.h */,
+				3C4C3EB22C814F7300A49D47 /* VCTDeviceState.m */,
 				3CFAFF092C81528C007F4D7B /* VCTDeviceXbox360.h */,
 				3CFAFF0A2C81528C007F4D7B /* VCTDeviceXbox360.m */,
 				3C4C3EB02C814F6B00A49D47 /* VHID internal */,
-				0A4691E715B56A1A003AB8FD /* VirtualControllerDevice.h */,
-				0A4691E815B56A1A003AB8FD /* VirtualControllerDevice.m */,
+				0A4691E715B56A1A003AB8FD /* VCTDevice.h */,
+				0A4691E815B56A1A003AB8FD /* VCTDevice.m */,
 				0A46960815B593A2003AB8FD /* VirtualController-Info.plist */,
 			);
 			name = framework;
@@ -167,10 +167,10 @@
 			children = (
 				0A4691BE15B568A7003AB8FD /* OLD_KEXT_driver */,
 				3C3074D1263C76BD00661748 /* dext */,
-				3C2B85BC263CF6C600713A24 /* DextManager.h */,
-				3C2B85BD263CF6C600713A24 /* DextManager.m */,
-				0A4691EE15B56A51003AB8FD /* VirtualControllerDeviceImpl.h */,
-				0A4691EF15B56A51003AB8FD /* VirtualControllerDeviceImpl.m */,
+				3C2B85BC263CF6C600713A24 /* VCTDextManager.h */,
+				3C2B85BD263CF6C600713A24 /* VCTDextManager.m */,
+				0A4691EE15B56A51003AB8FD /* VCTDeviceImpl.h */,
+				0A4691EF15B56A51003AB8FD /* VCTDeviceImpl.m */,
 			);
 			name = internal;
 			sourceTree = "<group>";
@@ -210,10 +210,10 @@
 		3C4C3EB02C814F6B00A49D47 /* VHID internal */ = {
 			isa = PBXGroup;
 			children = (
-				3C4C3EAC2C814F6B00A49D47 /* VHIDButtonCollection.h */,
-				3C4C3EAD2C814F6B00A49D47 /* VHIDButtonCollection.m */,
-				3C4C3EAE2C814F6B00A49D47 /* VHIDPointerCollection.h */,
-				3C4C3EAF2C814F6B00A49D47 /* VHIDPointerCollection.m */,
+				3C4C3EAC2C814F6B00A49D47 /* VCTButtonCollection.h */,
+				3C4C3EAD2C814F6B00A49D47 /* VCTButtonCollection.m */,
+				3C4C3EAE2C814F6B00A49D47 /* VCTPointerCollection.h */,
+				3C4C3EAF2C814F6B00A49D47 /* VCTPointerCollection.m */,
 			);
 			name = "VHID internal";
 			sourceTree = "<group>";
@@ -225,7 +225,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A46961415B593D4003AB8FD /* VirtualControllerDevice.h in Headers */,
+				0A46961415B593D4003AB8FD /* VCTDevice.h in Headers */,
 				3CFAFF0C2C8158C2007F4D7B /* VCTDeviceXbox360.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,12 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C4C3EB62C814FF600A49D47 /* VHIDPointerCollection.m in Sources */,
-				0A46962215B593E7003AB8FD /* VirtualControllerDeviceImpl.m in Sources */,
-				3C4C3EB52C814FF400A49D47 /* VHIDButtonCollection.m in Sources */,
-				0A46962315B593E7003AB8FD /* VirtualControllerDevice.m in Sources */,
-				3C4C3EB32C814F7300A49D47 /* VHIDDevice.m in Sources */,
-				3C2B85BF263CF6C600713A24 /* DextManager.m in Sources */,
+				3C4C3EB62C814FF600A49D47 /* VCTPointerCollection.m in Sources */,
+				0A46962215B593E7003AB8FD /* VCTDeviceImpl.m in Sources */,
+				3C4C3EB52C814FF400A49D47 /* VCTButtonCollection.m in Sources */,
+				0A46962315B593E7003AB8FD /* VCTDevice.m in Sources */,
+				3C4C3EB32C814F7300A49D47 /* VCTDeviceState.m in Sources */,
+				3C2B85BF263CF6C600713A24 /* VCTDextManager.m in Sources */,
 				3CFAFF0B2C81528C007F4D7B /* VCTDeviceXbox360.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

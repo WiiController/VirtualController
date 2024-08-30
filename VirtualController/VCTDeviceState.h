@@ -1,35 +1,25 @@
-//
-//  VHIDDevice.h
-//  VHID
-//
-//  Created by alxn1 on 23.07.12.
-//  Copyright 2012 alxn1. All rights reserved.
-//
-
-#import <Foundation/Foundation.h>
-
 typedef enum
 {
     VHIDDeviceTypeMouse,
     VHIDDeviceTypeJoystick
 } VHIDDeviceType;
 
-@class VHIDDevice;
-@class VHIDButtonCollection;
-@class VHIDPointerCollection;
+@class VCTDeviceState;
+@class VCTButtonCollection;
+@class VCTPointerCollection;
 
 @protocol VHIDDeviceDelegate <NSObject>
 
-- (void)VHIDDevice:(VHIDDevice *)device stateChanged:(NSData *)state;
+- (void)VHIDDevice:(VCTDeviceState *)device stateChanged:(NSData *)state;
 
 @end
 
-@interface VHIDDevice : NSObject
+@interface VCTDeviceState : NSObject
 {
 @private
     VHIDDeviceType _type;
-    VHIDButtonCollection *_buttons;
-    VHIDPointerCollection *_pointers;
+    VCTButtonCollection *_buttons;
+    VCTPointerCollection *_pointers;
     NSData *_descriptor;
     NSMutableData *_state;
 

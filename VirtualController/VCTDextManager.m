@@ -1,15 +1,9 @@
-//
-//  DextManager.m
-//  VirtualController
-//
-
-#import "DextManager.h"
+#import "VCTDextManager.h"
 
 #import <SystemExtensions/SystemExtensions.h>
 
 static NSString *const driverExtensionIdentifier = @"ca.igregory.VirtualController.dext";
 
-API_AVAILABLE(macos(10.15))
 @interface DextManagerExtensionRequestDelegate : NSObject <OSSystemExtensionRequestDelegate>
 
 @property BOOL requestSucceeded;
@@ -55,8 +49,8 @@ static dispatch_queue_t requestQueue(void) {
     
     return queue;
 }
-static API_AVAILABLE(macos(10.15))
-DextManagerExtensionRequestDelegate *requestDelegate(void) {
+
+static DextManagerExtensionRequestDelegate *requestDelegate(void) {
     static DextManagerExtensionRequestDelegate *requestDelegate;
     static dispatch_once_t once;
     dispatch_once(&once, ^{
@@ -66,7 +60,7 @@ DextManagerExtensionRequestDelegate *requestDelegate(void) {
     return requestDelegate;
 }
 
-@implementation DextManager
+@implementation VCTDextManager
     
 + (BOOL)loadDriver {
     __auto_type request = [OSSystemExtensionRequest activationRequestForExtension:driverExtensionIdentifier queue:requestQueue()];

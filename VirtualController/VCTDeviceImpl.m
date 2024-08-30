@@ -1,21 +1,15 @@
-//
-//  VirtualControllerDeviceImpl.m
-//  driver
-//
-//  Created by alxn1 on 17.07.12.
-//  Copyright 2012 alxn1. All rights reserved.
-//
+#import "VCTDeviceImpl.h"
+#import "VCTDextManager.h"
 
-#import "VirtualControllerDeviceImpl.h"
-#import "DextManager.h"
+#import <IOKit/IOKitLib.h>
 
 static char const *driverKitDriverUserClass = "ca_igregory_VirtualController";
 
-@implementation VirtualControllerDeviceImpl
+@implementation VCTDeviceImpl
 
 + (BOOL)prepare
 {
-    return [VirtualControllerDeviceImpl loadDriver];
+    return [VCTDeviceImpl loadDriver];
 }
 
 - (id)init
@@ -24,12 +18,12 @@ static char const *driverKitDriverUserClass = "ca_igregory_VirtualController";
     if (self == nil)
         return nil;
 
-    if (![VirtualControllerDeviceImpl prepare])
+    if (![VCTDeviceImpl prepare])
     {
         return nil;
     }
 
-    _connection = [VirtualControllerDeviceImpl createNewConnection];
+    _connection = [VCTDeviceImpl createNewConnection];
     if (_connection == IO_OBJECT_NULL)
     {
         return nil;
@@ -44,17 +38,17 @@ static char const *driverKitDriverUserClass = "ca_igregory_VirtualController";
         IOServiceClose(_connection);
 }
 
-- (BOOL)call:(VirtualControllerDeviceMethodSelector)selector
+- (BOOL)call:(VCTDeviceMethodSelector)selector
 {
     return [self call:selector data:nil];
 }
 
-- (BOOL)call:(VirtualControllerDeviceMethodSelector)selector data:(NSData *)data
+- (BOOL)call:(VCTDeviceMethodSelector)selector data:(NSData *)data
 {
     return (IOConnectCallMethod(_connection, selector, NULL, 0, [data bytes], [data length], NULL, NULL, NULL, NULL) == KERN_SUCCESS);
 }
 
-- (BOOL)call:(VirtualControllerDeviceMethodSelector)selector string:(NSString *)string
+- (BOOL)call:(VCTDeviceMethodSelector)selector string:(NSString *)string
 {
     const char *data = [string UTF8String];
     size_t size = strlen(data) + 1; // zero-terminator
@@ -64,12 +58,12 @@ static char const *driverKitDriverUserClass = "ca_igregory_VirtualController";
 
 - (BOOL)setDeviceProductString:(NSString *)string
 {
-    return [self call:VirtualControllerDeviceMethodSelectorSetDeviceProductString string:string];
+    return [self call:VCTDeviceMethodSelectorSetDeviceProductString string:string];
 }
 
 - (BOOL)setDeviceSerialNumberString:(NSString *)string
 {
-    return [self call:VirtualControllerDeviceMethodSelectorSetDeviceSerialNumberString string:string];
+    return [self call:VCTDeviceMethodSelectorSetDeviceSerialNumberString string:string];
 }
 
 - (BOOL)setDeviceVendorID:(uint32_t)vendorID productID:(uint32_t)productID
@@ -79,23 +73,23 @@ static char const *driverKitDriverUserClass = "ca_igregory_VirtualController";
     memcpy(data, &vendorID, sizeof(uint32_t));
     memcpy(data + sizeof(uint32_t), &productID, sizeof(uint32_t));
 
-    return [self call:VirtualControllerDeviceMethodSelectorSetDeviceVendorAndProductID
+    return [self call:VCTDeviceMethodSelectorSetDeviceVendorAndProductID
                  data:[NSData dataWithBytes:data length:sizeof(data)]];
 }
 
 - (BOOL)enable:(NSData *)HIDDescriptor
 {
-    return [self call:VirtualControllerDeviceMethodSelectorEnable data:HIDDescriptor];
+    return [self call:VCTDeviceMethodSelectorEnable data:HIDDescriptor];
 }
 
 - (BOOL)disable
 {
-    return [self call:VirtualControllerDeviceMethodSelectorDisable];
+    return [self call:VCTDeviceMethodSelectorDisable];
 }
 
 - (BOOL)updateState:(NSData *)HIDState
 {
-    return [self call:VirtualControllerDeviceMethodSelectorUpdateState data:HIDState];
+    return [self call:VCTDeviceMethodSelectorUpdateState data:HIDState];
 }
 
 + (io_service_t)findService
@@ -109,7 +103,7 @@ static char const *driverKitDriverUserClass = "ca_igregory_VirtualController";
 + (io_connect_t)createNewConnection
 {
     io_connect_t result = IO_OBJECT_NULL;
-    io_service_t service = [VirtualControllerDeviceImpl findService];
+    io_service_t service = [VCTDeviceImpl findService];
 
     if (service == IO_OBJECT_NULL)
         return result;
@@ -124,7 +118,7 @@ static char const *driverKitDriverUserClass = "ca_igregory_VirtualController";
 
 + (BOOL)isDriverLoaded
 {
-    io_service_t service = [VirtualControllerDeviceImpl findService];
+    io_service_t service = [VCTDeviceImpl findService];
     BOOL result = (service != IO_OBJECT_NULL);
 
     IOObjectRelease(service);
@@ -134,7 +128,7 @@ static char const *driverKitDriverUserClass = "ca_igregory_VirtualController";
 + (BOOL)loadDriver
 {
     if ([self isDriverLoaded]) return YES;
-    return [DextManager loadDriver];
+    return [VCTDextManager loadDriver];
 }
 
 @end

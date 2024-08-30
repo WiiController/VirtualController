@@ -1,6 +1,4 @@
-#import <Foundation/Foundation.h>
-
-@class VHIDDevice;
+@class VCTDeviceState;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,7 +16,7 @@ typedef struct {
 
 - (void)setState:(VCTDeviceStateXbox360 *)state;
 
-@property(readonly) VHIDDevice *deviceState;
+@property(readonly) VCTDeviceState *deviceState;
 
 @end
 

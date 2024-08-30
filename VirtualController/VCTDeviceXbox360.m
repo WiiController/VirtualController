@@ -1,14 +1,14 @@
 #import "VCTDeviceXbox360.h"
 
-#import "VHIDDevice.h"
-#import "VirtualControllerDevice.h"
+#import "VCTDeviceState.h"
+#import "VCTDevice.h"
 
 #import <os/log.h>
 
 @interface VCTDeviceXbox360 () <VHIDDeviceDelegate>
 
-@property() VHIDDevice *deviceState;
-@property() VirtualControllerDevice *device;
+@property() VCTDeviceState *deviceState;
+@property() VCTDevice *device;
 
 @end
 
@@ -19,17 +19,17 @@
     self = [super init];
     if (!self) return nil;
     
-    _deviceState = [[VHIDDevice alloc] initWithType:VHIDDeviceTypeJoystick
+    _deviceState = [[VCTDeviceState alloc] initWithType:VHIDDeviceTypeJoystick
                                        pointerCount:3
                                         buttonCount:26
                                          isRelative:NO];
     _deviceState.delegate = self;
     
-    _device = [[VirtualControllerDevice alloc] initWithHIDDescriptor:_deviceState.descriptor properties:@{
-        VirtualControllerDeviceVendorIDKey: @(0x045E),
-        VirtualControllerDeviceProductIDKey: @(0x028E),
-        VirtualControllerDeviceProductStringKey: name,
-        VirtualControllerDeviceSerialNumberStringKey: serial
+    _device = [[VCTDevice alloc] initWithHIDDescriptor:_deviceState.descriptor properties:@{
+        VCTDeviceVendorIDKey: @(0x045E),
+        VCTDeviceProductIDKey: @(0x028E),
+        VCTDeviceProductStringKey: name,
+        VCTDeviceSerialNumberStringKey: serial
     }];
     if (!_device) {
         os_log_with_type(
@@ -56,7 +56,7 @@
     }
 }
 
-- (void)VHIDDevice:(VHIDDevice*)device stateChanged:(NSData*)state
+- (void)VHIDDevice:(VCTDeviceState*)device stateChanged:(NSData*)state
 {
     [_device updateHIDState:state];
 }
