@@ -119,34 +119,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		0A4691D915B5693B003AB8FD /* framework */ = {
-			isa = PBXGroup;
-			children = (
-				0A4691EB15B56A2A003AB8FD /* internal */,
-				3C4C3EB12C814F7300A49D47 /* VCTDeviceState.h */,
-				3C4C3EB22C814F7300A49D47 /* VCTDeviceState.m */,
-				3CFAFF092C81528C007F4D7B /* VCTDeviceXbox360.h */,
-				3CFAFF0A2C81528C007F4D7B /* VCTDeviceXbox360.m */,
-				3C4C3EB02C814F6B00A49D47 /* VHID internal */,
-				0A4691E715B56A1A003AB8FD /* VCTDevice.h */,
-				0A4691E815B56A1A003AB8FD /* VCTDevice.m */,
-				0A46960815B593A2003AB8FD /* VirtualController-Info.plist */,
-			);
-			name = framework;
-			sourceTree = "<group>";
-		};
-		0A4691EB15B56A2A003AB8FD /* internal */ = {
-			isa = PBXGroup;
-			children = (
-				3C3074D1263C76BD00661748 /* dext */,
-				3C2B85BC263CF6C600713A24 /* VCTDextManager.h */,
-				3C2B85BD263CF6C600713A24 /* VCTDextManager.m */,
-				0A4691EE15B56A51003AB8FD /* VCTDeviceImpl.h */,
-				0A4691EF15B56A51003AB8FD /* VCTDeviceImpl.m */,
-			);
-			name = internal;
-			sourceTree = "<group>";
-		};
 		19C28FB6FE9D52B211CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +131,9 @@
 		247142CAFF3F8F9811CA285C /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				0A4691D915B5693B003AB8FD /* framework */,
+				3CFAFF102C817E42007F4D7B /* Public */,
+				3CFAFF112C817E6E007F4D7B /* Internal */,
+				0A46960815B593A2003AB8FD /* VirtualController-Info.plist */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -179,7 +153,37 @@
 			path = dext;
 			sourceTree = "<group>";
 		};
-		3C4C3EB02C814F6B00A49D47 /* VHID internal */ = {
+		3C4C3EB02C814F6B00A49D47 /* DeviceState */ = {
+			isa = PBXGroup;
+			children = (
+				3C4C3EB12C814F7300A49D47 /* VCTDeviceState.h */,
+				3C4C3EB22C814F7300A49D47 /* VCTDeviceState.m */,
+				3CFAFF122C817E96007F4D7B /* Components */,
+			);
+			path = DeviceState;
+			sourceTree = "<group>";
+		};
+		3CFAFF102C817E42007F4D7B /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				3CFAFF092C81528C007F4D7B /* VCTDeviceXbox360.h */,
+				3CFAFF0A2C81528C007F4D7B /* VCTDeviceXbox360.m */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		3CFAFF112C817E6E007F4D7B /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				0A4691E715B56A1A003AB8FD /* VCTDevice.h */,
+				0A4691E815B56A1A003AB8FD /* VCTDevice.m */,
+				3CFAFF132C817EBB007F4D7B /* Driver */,
+				3C4C3EB02C814F6B00A49D47 /* DeviceState */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		3CFAFF122C817E96007F4D7B /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				3C4C3EAC2C814F6B00A49D47 /* VCTButtonCollection.h */,
@@ -187,7 +191,19 @@
 				3C4C3EAE2C814F6B00A49D47 /* VCTPointerCollection.h */,
 				3C4C3EAF2C814F6B00A49D47 /* VCTPointerCollection.m */,
 			);
-			name = "VHID internal";
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3CFAFF132C817EBB007F4D7B /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				0A4691EE15B56A51003AB8FD /* VCTDeviceImpl.h */,
+				0A4691EF15B56A51003AB8FD /* VCTDeviceImpl.m */,
+				3C2B85BC263CF6C600713A24 /* VCTDextManager.h */,
+				3C2B85BD263CF6C600713A24 /* VCTDextManager.m */,
+				3C3074D1263C76BD00661748 /* dext */,
+			);
+			path = Driver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,7 +502,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = dext/virtualcontroller.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Internal/Driver/dext/virtualcontroller.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
@@ -504,7 +520,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = dext/Info.plist;
+				INFOPLIST_FILE = Internal/Driver/dext/Info.plist;
 				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -533,7 +549,7 @@
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_ENTITLEMENTS = dext/virtualcontroller.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Internal/Driver/dext/virtualcontroller.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
@@ -547,7 +563,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = dext/Info.plist;
+				INFOPLIST_FILE = Internal/Driver/dext/Info.plist;
 				MARKETING_VERSION = 1.0.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
