@@ -14,30 +14,34 @@
 kern_return_t
 IMPL(ca_igregory_VirtualController, Start)
 {
+    os_log(OS_LOG_DEFAULT, "ca_igregory_VirtualController::Start");
+    
     kern_return_t ret;
     ret = Start(provider, SUPERDISPATCH);
-    os_log(OS_LOG_DEFAULT, "HELLO BRUDDY");
     if (ret != kIOReturnSuccess) return ret;
     
-    RegisterService();
+    ret = RegisterService();
+    os_log(OS_LOG_DEFAULT, "ca_igregory_VirtualController::Start: RegisterService returned %d", ret);
     
-    return kIOReturnSuccess;
+    return ret;
 }
 
 kern_return_t
 IMPL(ca_igregory_VirtualController, NewUserClient)
 {
+    os_log(OS_LOG_DEFAULT, "ca_igregory_VirtualController::NewUserClient");
+    
     IOService *newService;
     // See Info.plist for properties
     auto ret = Create(this, "UserClientProperties", &newService);
     if (ret != kIOReturnSuccess) {
-        os_log(OS_LOG_DEFAULT, "Failed to create new user client: code %d", ret);
+        os_log(OS_LOG_DEFAULT, "ca_igregory_VirtualController::NewUserClient: Failed to create new user client: code %d", ret);
         return ret;
     }
     
     *userClient = OSDynamicCast(IOUserClient, newService);
     if (!*userClient) {
-        os_log(OS_LOG_DEFAULT, "Failed to cast new user client to IOUserClient");
+        os_log(OS_LOG_DEFAULT, "ca_igregory_VirtualController::NewUserClient: Failed to cast new user client to IOUserClient");
         newService->release();
         return kIOReturnError;
     }

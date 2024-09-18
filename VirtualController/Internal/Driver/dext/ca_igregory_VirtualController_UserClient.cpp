@@ -115,13 +115,14 @@ kern_return_t ca_igregory_VirtualController_UserClient::_setDeviceVendorAndProdu
 bool
 ca_igregory_VirtualController_UserClient::init()
 {
-    os_log(OS_LOG_DEFAULT, "Hello world!");
+    os_log(OS_LOG_DEFAULT, "ca_igregory_VirtualController_UserClient::init");
+    
     if (!super::init()) return false;
     ivars = IONewZero(ca_igregory_VirtualController_UserClient_IVars, 1);
     if (!ivars) return false;
     
     ivars->_device = nullptr;
-    ivars->_deviceProductString = OSString::withCString("VirtualController Virtual HID Device");
+    ivars->_deviceProductString = OSString::withCString("VirtualController generic device");
     ivars->_deviceSerialNumberString = OSString::withCString("000000000000");
     ivars->_deviceVendorID = 0;
     ivars->_deviceProductID = 0;
@@ -142,17 +143,16 @@ ca_igregory_VirtualController_UserClient::free()
 kern_return_t
 IMPL(ca_igregory_VirtualController_UserClient, Start)
 {
-    auto ret = Start(provider, SUPERDISPATCH);
-    if (ret != kIOReturnSuccess) return ret;
+    os_log(OS_LOG_DEFAULT, "ca_igregory_VirtualController_UserClient::Start");
     
-    os_log(OS_LOG_DEFAULT, "User client Start");
-    return kIOReturnSuccess;
+    return Start(provider, SUPERDISPATCH);
 }
 
 kern_return_t
 IMPL(ca_igregory_VirtualController_UserClient, Stop)
 {
-    os_log(OS_LOG_DEFAULT, "User client Stop");
+    os_log(OS_LOG_DEFAULT, "ca_igregory_VirtualController_UserClient::Stop");
+    
     return Stop(provider, SUPERDISPATCH);
 }
 
@@ -179,6 +179,8 @@ ca_igregory_VirtualController_UserClient::ExternalMethod(
 kern_return_t
 ca_igregory_VirtualController_UserClient::enableDevice(OSData *hidDescriptorData)
 {
+    os_log(OS_LOG_DEFAULT, "ca_igregory_VirtualController_UserClient::enableDevice");
+    
     if (ivars->_device)
     {
         auto ret = disableDevice();
@@ -211,12 +213,15 @@ ca_igregory_VirtualController_UserClient::enableDevice(OSData *hidDescriptorData
 
 kern_return_t ca_igregory_VirtualController_UserClient::disableDevice()
 {
+    os_log(OS_LOG_DEFAULT, "ca_igregory_VirtualController_UserClient::disableDevice");
+    
     if (ivars->_device)
     {
         ivars->_device->Terminate(0);
         ivars->_device->release();
         ivars->_device = nullptr;
     }
+    
     return kIOReturnSuccess;
 }
 

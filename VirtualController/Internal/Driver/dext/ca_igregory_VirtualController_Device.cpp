@@ -109,6 +109,8 @@ struct ca_igregory_VirtualController_Device_IVars {
 bool
 ca_igregory_VirtualController_Device::init()
 {
+    os_log(OS_LOG_DEFAULT, "ca_igregory_VirtualController_Device::init");
+    
     if (!super::init()) return false;
     ivars = IONewZero(ca_igregory_VirtualController_Device_IVars, 1);
     if (!ivars) return false;
@@ -122,10 +124,13 @@ ca_igregory_VirtualController_Device::init()
 void
 ca_igregory_VirtualController_Device::free()
 {
+    os_log(OS_LOG_DEFAULT, "ca_igregory_VirtualController_Device::free");
+    
     if (ivars->_productString) ivars->_productString->release();
     if (ivars->_serialNumberString) ivars->_serialNumberString->release();
     if (ivars->_hidReportDescriptor) ivars->_hidReportDescriptor->release();
     if (ivars->_stateBuffer) ivars->_stateBuffer->release();
+    
     super::free();
 }
 
