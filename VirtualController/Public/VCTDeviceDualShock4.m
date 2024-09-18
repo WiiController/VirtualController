@@ -1,18 +1,18 @@
-#import "VCTDeviceXbox360.h"
+#import "VCTDeviceDualShock4.h"
 
 #import "VCTDeviceState.h"
 #import "VCTDevice.h"
 
 #import <os/log.h>
 
-@interface VCTDeviceXbox360 () <VHIDDeviceDelegate>
+@interface VCTDeviceDualShock4 () <VHIDDeviceDelegate>
 
 @property() VCTDeviceState *deviceState;
 @property() VCTDevice *device;
 
 @end
 
-@implementation VCTDeviceXbox360
+@implementation VCTDeviceDualShock4
 
 - (instancetype)initWithName:(NSString *)name serial:(NSString *)serial
 {
@@ -26,9 +26,9 @@
     _deviceState.delegate = self;
     
     _device = [[VCTDevice alloc] initWithHIDDescriptor:_deviceState.descriptor properties:@{
-        // https://github.com/nefarius/ViGEmBus/blob/d986e1d93708ec9b11049542fa6027272cce716c/sys/XusbPdo.hpp#L66
-        VCTDeviceVendorIDKey: @(0x045E),
-        VCTDeviceProductIDKey: @(0x028E),
+        // https://github.com/nefarius/ViGEmBus/blob/d986e1d93708ec9b11049542fa6027272cce716c/sys/Ds4Pdo.hpp#L70
+        VCTDeviceVendorIDKey: @(0x054C),
+        VCTDeviceProductIDKey: @(0x05C4),
         VCTDeviceProductStringKey: name,
         VCTDeviceSerialNumberStringKey: serial
     }];
@@ -44,11 +44,11 @@
     return self;
 }
 
-- (void)setState:(VCTDeviceStateXbox360 *)state
+- (void)setState:(VCTDeviceStateDualShock4 *)state
 {
     [_deviceState setPointer:0 position:state->leftStick];
-    [_deviceState setPointer:1 position:NSMakePoint(state->triggers.left, -state->rightStick.x)];
-    [_deviceState setPointer:2 position:NSMakePoint(-state->rightStick.y, -state->triggers.right)];
+    [_deviceState setPointer:1 position:NSMakePoint(state->rightStick.x, -state->triggers.left)];
+    [_deviceState setPointer:2 position:NSMakePoint(state->triggers.right, state->rightStick.y)];
     
     for (int i = 0; i < sizeof state->buttons / sizeof state->buttons[0]; ++i) {
         [_deviceState setButton:i pressed:state->buttons[i].pressed];

@@ -25,6 +25,8 @@
 		3C4C3EB32C814F7300A49D47 /* VCTDeviceState.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C3EB22C814F7300A49D47 /* VCTDeviceState.m */; };
 		3C4C3EB52C814FF400A49D47 /* VCTButtonCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C3EAD2C814F6B00A49D47 /* VCTButtonCollection.m */; };
 		3C4C3EB62C814FF600A49D47 /* VCTPointerCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C4C3EAF2C814F6B00A49D47 /* VCTPointerCollection.m */; };
+		3C988FE92C9A541300FC4E0A /* VCTDeviceDualShock4.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C988FE82C9A541200FC4E0A /* VCTDeviceDualShock4.m */; };
+		3C988FEA2C9A54AA00FC4E0A /* VCTDeviceDualShock4.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C988FE72C9A541200FC4E0A /* VCTDeviceDualShock4.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3CFAFF0B2C81528C007F4D7B /* VCTDeviceXbox360.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFAFF0A2C81528C007F4D7B /* VCTDeviceXbox360.m */; };
 		3CFAFF0C2C8158C2007F4D7B /* VCTDeviceXbox360.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CFAFF092C81528C007F4D7B /* VCTDeviceXbox360.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -68,6 +70,8 @@
 		3C4C3EAF2C814F6B00A49D47 /* VCTPointerCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCTPointerCollection.m; sourceTree = "<group>"; };
 		3C4C3EB12C814F7300A49D47 /* VCTDeviceState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VCTDeviceState.h; sourceTree = "<group>"; };
 		3C4C3EB22C814F7300A49D47 /* VCTDeviceState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VCTDeviceState.m; sourceTree = "<group>"; };
+		3C988FE72C9A541200FC4E0A /* VCTDeviceDualShock4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCTDeviceDualShock4.h; sourceTree = "<group>"; };
+		3C988FE82C9A541200FC4E0A /* VCTDeviceDualShock4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCTDeviceDualShock4.m; sourceTree = "<group>"; };
 		3CFAFF092C81528C007F4D7B /* VCTDeviceXbox360.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VCTDeviceXbox360.h; sourceTree = "<group>"; };
 		3CFAFF0A2C81528C007F4D7B /* VCTDeviceXbox360.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VCTDeviceXbox360.m; sourceTree = "<group>"; };
 		8DA8362C06AD9B9200E5AC22 /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = /System/Library/Frameworks/Kernel.framework; sourceTree = "<absolute>"; };
@@ -168,6 +172,8 @@
 			children = (
 				3CFAFF092C81528C007F4D7B /* VCTDeviceXbox360.h */,
 				3CFAFF0A2C81528C007F4D7B /* VCTDeviceXbox360.m */,
+				3C988FE72C9A541200FC4E0A /* VCTDeviceDualShock4.h */,
+				3C988FE82C9A541200FC4E0A /* VCTDeviceDualShock4.m */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -213,6 +219,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C988FEA2C9A54AA00FC4E0A /* VCTDeviceDualShock4.h in Headers */,
 				0A46961415B593D4003AB8FD /* VCTDevice.h in Headers */,
 				3CFAFF0C2C8158C2007F4D7B /* VCTDeviceXbox360.h in Headers */,
 			);
@@ -310,6 +317,7 @@
 				0A46962215B593E7003AB8FD /* VCTDeviceImpl.m in Sources */,
 				3C4C3EB52C814FF400A49D47 /* VCTButtonCollection.m in Sources */,
 				0A46962315B593E7003AB8FD /* VCTDevice.m in Sources */,
+				3C988FE92C9A541300FC4E0A /* VCTDeviceDualShock4.m in Sources */,
 				3C4C3EB32C814F7300A49D47 /* VCTDeviceState.m in Sources */,
 				3C2B85BF263CF6C600713A24 /* VCTDextManager.m in Sources */,
 				3CFAFF0B2C81528C007F4D7B /* VCTDeviceXbox360.m in Sources */,
