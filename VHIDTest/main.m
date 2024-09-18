@@ -92,10 +92,6 @@ typedef enum VHIDJoystickAxisValueType {
 
 @end
 
-@interface VHIDXBox360Joystick : VHIDJoystick
-
-@end
-
 int main(int argC, char *argV[])
 {
     return NSApplicationMain(argC, (const char**)argV);
